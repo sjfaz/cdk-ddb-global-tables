@@ -10,7 +10,7 @@ export class GlobalDataLayer extends Stack {
     // Stream set automatically, but can set explicitly
     const globalTable = new dynamodb.Table(this, "GTTestTable", {
       partitionKey: { name: "pk", type: dynamodb.AttributeType.STRING },
-      replicationRegions: ["us-east-1"], // additional regions only
+      replicationRegions: ["eu-central-1"], // additional regions only
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: RemovalPolicy.RETAIN,
       pointInTimeRecovery: true,
